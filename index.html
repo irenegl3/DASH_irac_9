@@ -1,1 +1,34 @@
-sd
+<!doctype html>
+<html>
+
+<head>
+    <title>DASH</title>
+    <style>
+        video {
+            width: 640px;
+            height: 360px;
+        }
+    </style>
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1>Bienvenido/a al servicio de streaming con DASH del equipo 9 :)</h1>
+        <video class="dashjs-player" autoplay controls preload="auto">
+            <source src="
+    https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd" type="application/dash+xml" />
+        </video>
+    </div>
+    <script>
+        var player;
+        document.addEventListener("DOMContentLoaded", function () {
+            init();
+        });
+        function init() {
+            player = dashjs.MediaPlayerFactory.create(document.querySelector(".dashjs-player"));
+        };
+    </script>
+</body>
+
+</html>
