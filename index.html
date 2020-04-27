@@ -4,6 +4,12 @@
 <head>
     <title>DASH</title>
     <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+    <style>
+        video {
+            width: 640px;
+            height: 360px;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,6 +27,11 @@
         });
         function init() {
             player = dashjs.MediaPlayerFactory.create(document.querySelector(".dashjs-player"));
+            player.updateSettings({
+                'debug': {
+                    'logLevel': dashjs.Debug.LOG_LEVEL_INFO
+                }
+            });
         };
     </script>
 </body>
