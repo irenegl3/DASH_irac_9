@@ -20,3 +20,8 @@ git pull
 ``` shell
 git status
 ```
+
+## Para arrancar el servidor
+``` shell
+pyhton -m SimpleHTTPServer 8080
+```
