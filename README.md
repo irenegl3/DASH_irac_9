@@ -21,7 +21,9 @@ git pull
 git status
 ```
 
-## Para arrancar el servidor
+## Arrancar el servidor
+En el directorio en el que se encuentran todos los ficheros (importante que esté el `index.html`):
+
 ``` shell
 pyhton -m SimpleHTTPServer 8080
 ```
